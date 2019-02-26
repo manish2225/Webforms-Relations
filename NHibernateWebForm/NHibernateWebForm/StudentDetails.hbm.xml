@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="NHibernateWebForm"
+                   namespace="NHibernateWebForm">
+  <class name="StudentDetails">
+    <id name="Id">
+      <!--<generator class="increment"/>-->
+    </id>
+    <property name="StudentName"/>
+    <property name="FatherName"/>
+    <property name="Email"/>
+    <property name="Address"/>
+    <property name="Mobile"/>
+    <!--<property name="Dept_Id"/>-->
+    
+    <many-to-one name = "DepartmentDetails" column = "Dept_Id"/>
+  </class>
+</hibernate-mapping>
